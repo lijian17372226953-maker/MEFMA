@@ -30,14 +30,3 @@ All scripts are written in **MATLAB**. To run the scripts:
 2. Ensure you have the Signal Processing Toolbox and Image Processing Toolbox installed in your MATLAB environment.
 3. Run the evaluation scripts directly. The scripts are configured to automatically load the corresponding variables from the `.mat` files provided in this repository.
 
-## 📝 Citation
-
-If you find our datasets or evaluation scripts helpful for your research, please consider citing our work. The full citation will be updated upon publication.
-
-```text
-@article{MEFMA2026,
-  title={MEFMA: A Multi-Scale Empirical Fringe-Manifold Adaptive Filtering Framework for Robust InSAR Phase Restoration},
-  author={Jian Li, Hongdong Fan, Huifu Zhuang, Yeerda Yeerdingdala and Sen Du},
-  journal={IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing},
-  year={Under Review}
-}
