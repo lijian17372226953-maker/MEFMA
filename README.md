@@ -21,7 +21,7 @@ These scripts are used to calculate the 6 objective metrics presented in the pap
 
 ### 3. Datasets (`/Datasets`)
 * `Simulated_Datasets.mat`: Contains the pre-generated simulated complex phase fields (wrapped noise phase, true phase, and coherence maps).
-* `Real_Datasets.mat`: Contains the highly decorrelated real-world spaceborne SAR datasets used in Section IV of the manuscript, including the **Myanmar earthquake**, **Turkey earthquake**, and **Etna volcano**. *(Note: The exact metadata, temporal baselines, and perpendicular baselines for these interferometric pairs are included within the data structures).*
+* `Real_Datasets.mat`: Contains the highly decorrelated real-world spaceborne SAR datasets used in Section IV of the manuscript, including the **Myanmar earthquake**, **Turkey earthquake**, and **Etna volcano**.
 
 ## 🚀 Usage 
 
