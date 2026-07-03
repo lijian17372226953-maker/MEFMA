@@ -9,17 +9,17 @@ This repository contains the simulation data generation scripts, quantitative ev
 
 The current repository provides all necessary scripts and data to reproduce the simulation scenarios and evaluate the phase filtering metrics discussed in the manuscript.
 
-### 1. Simulated Data Generation (`/Simulation_Scripts`)
+### 1. Simulated Data Generation
 We provide the exact MATLAB scripts used to mathematically model the decorrelation noise and generate the complex interferometric fringes.
 * `simulate_Cone_Ramp_Peaks.m`: Generates the continuous low-SNR gradient datasets, including the isotropic gradual deformation (Cone), multi-oriented sector radial field (Ramp), and multi-peak topographic phase (Peaks).
 * `simulate_Fractal_Composite.m`: Generates the highly non-stationary composite deformation field superimposed on a fractal base.
 
-### 2. Quantitative Evaluation Metrics (`/Evaluation_Scripts`)
+### 2. Quantitative Evaluation Metrics
 These scripts are used to calculate the 6 objective metrics presented in the paper. They are provided to ensure strict experimental reproducibility without ambiguity caused by different programmatic implementations.
 * `evaluate_SSIM_RMSE_PSNR.m`: Evaluates Structural Similarity (SSIM), Root Mean Square Error (RMSE), and Peak Signal-to-Noise Ratio (PSNR) against the ground-truth phase.
 * `evaluate_PSD_SPD_RPN.m`: Evaluates local phase smoothness via Phase Standard Deviation (PSD) and Sum of Absolute Phase Differences (SPD), and calculates the Residue Point Number (RPN) for topological continuity.
 
-### 3. Datasets (`/Datasets`)
+### 3. Datasets
 * `Simulated_Datasets.mat`: Contains the pre-generated simulated complex phase fields (wrapped noise phase, true phase, and coherence maps).
 * `Real_Datasets.mat`: Contains the highly decorrelated real-world spaceborne SAR datasets used in Section IV of the manuscript, including the **Myanmar earthquake**, **Turkey earthquake**, and **Etna volcano**.
 
