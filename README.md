@@ -1,9 +1,27 @@
 # MEFMA: A Multi-Scale Empirical Fringe-Manifold Adaptive Filtering Framework for Robust InSAR Phase Restoration
 
-This repository contains the simulation data generation scripts, quantitative evaluation scripts, and raw datasets for the paper "**MEFMA: A Multi-Scale Empirical Fringe-Manifold Adaptive Filtering Framework for Robust InSAR Phase Restoration**", currently under review in the *IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing* (JSTARS).
+[![Language](https://img.shields.io/badge/Language-MATLAB-blue.svg)](https://www.mathworks.com/)
+[![Status](https://img.shields.io/badge/Status-Under_Review-orange.svg)]()
+[![License](https://img.shields.io/badge/License-MIT-green.svg)]()
+
+This repository contains the simulation data generation scripts, quantitative evaluation scripts, and raw datasets for the paper **"MEFMA: A Multi-Scale Empirical Fringe-Manifold Adaptive Filtering Framework for Robust InSAR Phase Restoration"**, currently under review in the *IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing (JSTARS)*.
 
 > **⚠️ Important Notice Regarding the Core Algorithm:** 
 > To comply with journal policies during the double-blind/peer-review process, the core MEFMA algorithmic source code (`MEFMA.m` and related functional dependencies) is temporarily withheld. **The complete core algorithm will be fully open-sourced in this repository immediately upon the formal acceptance of the manuscript.**
+
+---
+
+## 📖 About the Project
+
+In conditions of extremely low signal-to-noise ratio and complex decorrelation, the interferometric synthetic aperture radar (InSAR) phase is often severely corrupted by dense noise. Existing filtering methods struggle to achieve an effective balance among noise suppression, high-frequency topological detail preservation, and the avoidance of nonphysical spurious fringes, thereby constraining the accuracy of subsequent phase unwrapping.
+
+To address this issue, this article proposes a multiscale empirical fringe-manifold adaptive filtering (MEFMA) framework. The algorithm constructs a V-cycle-like phase decomposition and cascaded reconstruction framework, which is primarily driven alternately by two nonlinear operators:
+* **Sparsity-Driven Frequency-Adaptive Operator:** Enables the data-driven extraction of local fringe features based on Hoyer's sparsity, bypassing rigid hyperparameter constraints.
+* **Complex Gradient Constant Phase Reconstruction (CGCPR):** A terminal smoothing operator that effectively filters out broadband noise while preserving high-frequency deformation gradients without relying on heavy subspace eigen-decomposition.
+
+Furthermore, the algorithm introduces a coherence-based cascaded weighting and terminal gradient smoothing mechanism to suppress the nonlinear propagation and accumulation of errors.
+
+---
 
 ## 📂 Repository Contents
 
@@ -23,10 +41,13 @@ These scripts are used to calculate the 6 objective metrics presented in the pap
 * `Simulated_Datasets.mat`: Contains the pre-generated simulated complex phase fields (wrapped noise phase, true phase, and coherence maps).
 * `Real_Datasets.mat`: Contains the highly decorrelated real-world spaceborne SAR datasets used in Section IV of the manuscript, including the **Myanmar earthquake**, **Turkey earthquake**, and **Etna volcano**.
 
+---
+
 ## 🚀 Usage 
 
 All scripts are written in **MATLAB**. To run the scripts:
-1. Clone this repository to your local machine.
-2. Ensure you have the Signal Processing Toolbox and Image Processing Toolbox installed in your MATLAB environment.
-3. Run the evaluation scripts directly. The scripts are configured to automatically load the corresponding variables from the `.mat` files provided in this repository.
 
+1. Clone this repository to your local machine:
+   ```bash
+   git clone [https://github.com/YourUsername/MEFMA.git](https://github.com/YourUsername/MEFMA.git)
+   cd MEFMA
